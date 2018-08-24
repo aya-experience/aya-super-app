@@ -34,25 +34,22 @@ export class Mobile extends Component {
 
   render() {
     return (
-      <div>
+      <div className="bg-near-black app">
         <Notification
           text="Well connected to the browser!"
           handleClick={this.handleNotification}
           isVisible={this.state.isBrowserActived}
         />
-
         <Navbar />
-        <div className="pa4 mt4">
-          <div className="columns is-mobile is-multiline">
-            {members.map(member => (
+        <div className="content">
+            {members.map((member, index) => (
               <Element
                 handleClick={this.handlePress}
                 key={member.name}
-                imageSrc={member.img}
-                name={member.name}
+                member={member}
+                reversed={index%2 !== 0}
               />
             ))}
-          </div>
         </div>
       </div>
     );
