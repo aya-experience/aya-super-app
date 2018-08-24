@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+* {
   font-family: "Lato", sans-serif;
   color: white;
 }
@@ -115,7 +115,40 @@ body {
 }
 
 .qr {
-  padding: 50px;
-  background-color: white;
-  border-radius: 50%;
+  height: 150px;
+}
+
+.desktop {
+  text-align: center;
+  height: 100vh;
+}
+
+.mega-size {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.weird-margin {
+  margin-top: 100px;
+}
+
+.mobile-mini {
+  height: 100px;
+}
+
+.p-mobile {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-margin {
+  margin-top: 120px;
+}
+
+.arrow {
+  margin-top: 80px;
+  height: 40px;
 }
