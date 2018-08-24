@@ -1,17 +1,18 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('./icons/icomoon.eot?ro2msi');
-  src:  url('./icons/icomoon.eot?ro2msi#iefix') format('embedded-opentype'),
-  url('./icons/icomoon.ttf?ro2msi') format('truetype'),
-  url('./icons/icomoon.woff?ro2msi') format('woff'),
-  url('./icons/icomoon.svg?ro2msi#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("./icons/icomoon.eot?ro2msi");
+  src: url("./icons/icomoon.eot?ro2msi#iefix") format("embedded-opentype"),
+    url("./icons/icomoon.ttf?ro2msi") format("truetype"),
+    url("./icons/icomoon.woff?ro2msi") format("woff"),
+    url("./icons/icomoon.svg?ro2msi#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,12 +26,13 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    color: white;
+  font-family: "Lato", sans-serif;
+  color: white;
 }
 
-.app, .navbar-brand {
-    background-image: url("stars.svg");
+.app,
+.navbar-brand {
+  background-image: url("stars.svg");
 }
 
 .icon-kanji:before {
@@ -42,28 +44,29 @@ body {
 }
 
 .oval {
-    height: 385px;
-    width: 100%;
-    border: 2px solid #030020;
-    border-radius: 100%;
-    box-shadow: 0 2px 4px 0 rgba(255,255,255,0.58);
-    position: fixed;
-    top: -255px;
-    z-index: 9999;
+  height: 385px;
+  width: 100%;
+  border: 2px solid #030020;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.58);
+  position: fixed;
+  top: -255px;
+  z-index: 9999;
 }
 
 .team {
-    text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.5), 1px 1px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.5),
+    1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 .element {
-    height: 125px;
+  height: 125px;
 }
 
 .rounded {
-    border-radius: 100%;
-    transition: all 0.2s;
-    height: 120px;
-    width: 120px;
+  border-radius: 100%;
+  transition: all 0.2s;
+  height: 120px;
+  width: 120px;
 }
 
 .rounded:active {
@@ -71,29 +74,30 @@ body {
 }
 
 .details {
-    margin-left: 4px;
-    margin-bottom: 15px;
+  margin-left: 4px;
+  margin-bottom: 15px;
 }
 
 .reversed .details {
-    margin-left: 0;
-    margin-right: 4px;
+  margin-left: 0;
+  margin-right: 4px;
 }
 
 .name {
-    font-size: 18px;
-    text-shadow: 0 -1px 3px rgba(255, 255, 255, 0.7), 1px 1px 3px rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  text-shadow: 0 -1px 3px rgba(255, 255, 255, 0.7),
+    1px 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .line {
-    border-bottom: 1px solid white;
-    margin-left: -64px;
-    width: 125px;
+  border-bottom: 1px solid white;
+  margin-left: -64px;
+  width: 125px;
 }
 
 .reversed .line {
-    margin-left: 0;
-    margin-right: -64px;
+  margin-left: 0;
+  margin-right: -64px;
 }
 
 .custom-notification {
@@ -107,5 +111,5 @@ body {
 
 .custom-notification.active {
   opacity: 1;
-  transform: translateY(4rem);
+  transform: translateY(1rem);
 }
