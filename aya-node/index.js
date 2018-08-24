@@ -7,12 +7,16 @@ let mobileSocket = null;
 io.on("connection", socket => {
   console.log("a user is now connected");
 
-  socket.on("connect-browser", () => {
-    console.log("connected to browser");
+  socket.on("connect-app", () => {
+    console.log("connected to app");
     browserSocket = socket;
     if (mobileSocket) {
-      mobileSocket.emit("connect-browser");
+      mobileSocket.emit("connect-app");
     }
+  });
+
+  socket.on("connect-browser", () => {
+    console.log("connected to browser");
   });
 
   socket.on("connect-mobile", () => {
@@ -25,7 +29,7 @@ io.on("connection", socket => {
   socket.on("do-stuff-on-browser", e => {
     console.log(e);
     if (browserSocket) {
-      browserSocket.emit("do-stuff-on-browser");
+      browserSocket.emit("do-stuff-on-browser", e);
     }
   });
 });
