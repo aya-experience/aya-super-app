@@ -114,3 +114,9 @@ body {
   opacity: 1;
   transform: translateY(1rem);
 }
+
+.qr {
+  padding: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
