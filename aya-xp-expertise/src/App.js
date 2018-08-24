@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Desktop } from "./components/Desktop";
 import { Mobile } from "./components/Mobile";
 import "./App.css";
-import "react-bootstrap";
 
 export const Router = () => (
   <BrowserRouter>
