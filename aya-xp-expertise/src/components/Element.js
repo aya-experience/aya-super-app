@@ -9,7 +9,7 @@ export const Element = ({ member, reversed, handleClick }) => {
 
   return (
         <div className={
-            classNames(reversed? "pr4 flex-row-reverse reversed" : "pl4", "element flex flex-row mb3")
+            classNames(reversed? "pr4 flex-row-reverse reversed" : "pl4", "element flex flex-row pb3")
         } onClick={handleEvent}>
             <img
             src={require(`../data/images/${imageSrc}`)}
