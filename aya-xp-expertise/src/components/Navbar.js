@@ -10,7 +10,6 @@ export const Navbar = () => (
         target="_blank"
         rel="noopener noreferrer"
       />
-      <div className="oval" />
     </div>
   </nav>
 );

@@ -37,22 +37,22 @@ export class Mobile extends Component {
       <div className="bg-near-black app">
         <Notification
           text="Well connected to the browser!"
-          handleClick={this.handleNotification}
           isVisible={this.state.isBrowserActived}
         />
         <Navbar />
         <div className="content pt5">
-            <div className="ttu tc self-center tracked f3 pb2 team">Team</div>
-            <div className="elements pt5 pr2 pl2">
-                {members.map((member, index) => (
-                  <Element
-                    handleClick={this.handlePress}
-                    key={member.name}
-                    member={member}
-                    reversed={index%2 !== 0}
-                  />
-                ))}
-            </div>
+          <div className="ttu tc self-center tracked f3 pb2 team">Team</div>
+          <div className="oval" />
+          <div className="elements pt4 pr2 pl2">
+            {members.map((member, index) => (
+              <Element
+                handleClick={this.handlePress}
+                key={member.name}
+                member={member}
+                reversed={index % 2 !== 0}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
