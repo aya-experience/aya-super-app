@@ -21,6 +21,10 @@ export class Mobile extends Component {
     this.socket.emit("connect-mobile");
     this.socket.on("connect-app", () => {
       this.setState({ isBrowserActived: true });
+
+      setTimeout(() => {
+        this.setState({ isBrowserActived: false });
+      }, 3000);
     });
   }
 
