@@ -14,14 +14,16 @@ export const Element = ({ member, reversed, handleClick }) => {
             <img
             src={require(`../data/images/${imageSrc}`)}
             alt={name}
-            className="rounded w-30"
+            className="rounded"
             />
             <div className={
-                classNames({"items-end": reversed}, "details flex flex-column w-100 self-end mb2")
-            }>
+                classNames(
+                    {"items-end tr": reversed},
+                    "details flex flex-column w-100 self-end"
+                )}>
                 <span className="name tracked">{name}</span>
                 <span className="tracked">{role}</span>
-                <div className="line w-40"/>
+                <div className="line"/>
             </div>
         </div>
   );

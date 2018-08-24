@@ -61,7 +61,9 @@ body {
 
 .rounded {
     border-radius: 100%;
-  transition: all 0.2s;
+    transition: all 0.2s;
+    height: 120px;
+    width: 120px;
 }
 
 .rounded:active {
@@ -70,6 +72,7 @@ body {
 
 .details {
     margin-left: 4px;
+    margin-bottom: 15px;
 }
 
 .reversed .details {
@@ -85,6 +88,7 @@ body {
 .line {
     border-bottom: 1px solid white;
     margin-left: -64px;
+    width: 125px;
 }
 
 .reversed .line {
