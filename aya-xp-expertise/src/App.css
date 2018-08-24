@@ -75,7 +75,6 @@ body {
 
 .details {
   margin-left: 4px;
-  margin-bottom: 15px;
 }
 
 .reversed .details {
@@ -91,13 +90,13 @@ body {
 
 .line {
   border-bottom: 1px solid white;
-  margin-left: -64px;
+  margin-left: -60px;
   width: 125px;
 }
 
 .reversed .line {
   margin-left: 0;
-  margin-right: -64px;
+  margin-right: -60px;
 }
 
 .custom-notification {
