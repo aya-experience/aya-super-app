@@ -43,7 +43,8 @@ export class Mobile extends Component {
         <Navbar />
         <div className="content pt5">
             <div className="ttu tc self-center tracked f3 pb2 team">Team</div>
-            <div className="elements pt5 pr2 pl2">
+            <div className="oval"/>
+            <div className="elements pt4 pr2 pl2">
                 {members.map((member, index) => (
                   <Element
                     handleClick={this.handlePress}

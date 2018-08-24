@@ -42,13 +42,13 @@ body {
 }
 
 .oval {
-    height: 385px;
+    height: 400px;
     width: 100%;
     border: 2px solid #030020;
     border-radius: 100%;
     box-shadow: 0 2px 4px 0 rgba(255,255,255,0.58);
-    position: fixed;
-    top: -255px;
+    margin-top: -375px;
+    position: absolute;
     z-index: 9999;
 }
 
