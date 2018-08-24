@@ -13,8 +13,12 @@ export class Mobile extends Component {
     this.state = { isBrowserActived: false };
   }
 
-  handlePress = name => {
-    this.socket.emit("do-stuff-on-browser", { name });
+  handlePress = (name, event) => {
+      let elements = document.getElementsByClassName('focused');
+      Array.prototype.map.call(elements, elem => {elem.classList.remove("focused")});
+      let element = event.target.closest(".element");
+      element.classList.add('focused');
+      this.socket.emit("do-stuff-on-browser", { name });
   };
 
   componentDidMount() {

@@ -5,12 +5,13 @@ export const Element = ({ member, reversed, handleClick }) => {
     const name = member.name;
     const imageSrc = member.img;
     const role = member.role;
-    const handleEvent = () => handleClick(name);
+    const handleEvent = (event) => handleClick(name, event);
 
   return (
+      <div className="element mt2" onClick={handleEvent}>
         <div className={
-            classNames(reversed? "pr4 flex-row-reverse reversed" : "pl4", "element flex flex-row pb3")
-        } onClick={handleEvent}>
+            classNames(reversed? "pr4 flex-row-reverse reversed" : "pl4", "flex flex-row pt2 pb2")
+        }>
             <img
             src={require(`../data/images/${imageSrc}`)}
             alt={name}
@@ -26,5 +27,6 @@ export const Element = ({ member, reversed, handleClick }) => {
                 <div className="line"/>
             </div>
         </div>
+      </div>
   );
 };
