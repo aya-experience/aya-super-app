@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Desktop } from "./components/Desktop";
 import { Mobile } from "./components/Mobile";
 import "./App.css";
 
 export const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Desktop} />
-      <Route path="/mobile" component={Mobile} />
+      <Route exact path="/" component={Mobile} />
     </Switch>
   </BrowserRouter>
 );
