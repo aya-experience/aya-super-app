@@ -8,11 +8,15 @@ export class Mobile extends Component {
     this.socket = io("http://localhost:2018");
   }
 
+  handlePress = () => {
+    this.socket.emit("do-stuff-on-browser");
+  };
+
   componentDidMount() {
     this.socket.emit("connect-mobile");
   }
 
   render() {
-    return <div>Mobile Display</div>;
+    return <button onClick={this.handlePress}>Mobile Display</button>;
   }
 }

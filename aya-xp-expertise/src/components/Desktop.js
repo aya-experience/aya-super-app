@@ -10,6 +10,7 @@ export class Desktop extends Component {
 
   componentDidMount() {
     this.socket.emit("connect-browser");
+    this.socket.on("do-stuff-on-browser", () => alert("WTF"));
   }
 
   render() {
