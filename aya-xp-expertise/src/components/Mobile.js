@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import io from "socket.io-client";
+import { Element } from "./Element";
+import { Navbar } from "./Navbar";
+import members from "../data/members.json";
 
 export class Mobile extends Component {
   constructor(props) {
@@ -17,6 +20,21 @@ export class Mobile extends Component {
   }
 
   render() {
-    return <button onClick={this.handlePress}>Mobile Display</button>;
+    return (
+      <div>
+        <Navbar />
+        <div className="pa4">
+          <div className="columns is-mobile is-multiline">
+            {members.map(member => (
+              <Element
+                key={member.name}
+                imageSrc={member.img}
+                name={member.name}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
