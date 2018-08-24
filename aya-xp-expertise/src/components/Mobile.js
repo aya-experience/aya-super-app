@@ -19,7 +19,7 @@ export class Mobile extends Component {
 
   componentDidMount() {
     this.socket.emit("connect-mobile");
-    this.socket.on("connect-browser", () => {
+    this.socket.on("connect-app", () => {
       this.setState({ isBrowserActived: true });
     });
   }
@@ -38,7 +38,7 @@ export class Mobile extends Component {
         />
 
         <Navbar />
-        <div className="pa4">
+        <div className="pa4 mt4">
           <div className="columns is-mobile is-multiline">
             {members.map(member => (
               <Element
