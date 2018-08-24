@@ -16,6 +16,12 @@ io.on("connection", socket => {
     console.log("connected to mobile");
     mobileSocket = socket;
   });
+
+  socket.on("do-stuff-on-browser", () => {
+    if (browserSocket) {
+      browserSocket.emit("do-stuff-on-browser");
+    }
+  });
 });
 
 const PORT = 2018;
