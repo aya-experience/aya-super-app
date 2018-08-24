@@ -5,7 +5,7 @@ export class Mobile extends Component {
   constructor(props) {
     super(props);
 
-    this.socket = io("http://localhost:2018");
+    this.socket = io("http://192.168.1.127:2018");
   }
 
   handlePress = () => {
