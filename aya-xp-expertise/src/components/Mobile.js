@@ -23,7 +23,7 @@ export class Mobile extends Component {
     return (
       <div>
         <Navbar />
-        <div className="pa4">
+        <div className="pa4 mt4">
           <div className="columns is-mobile is-multiline">
             {members.map(member => (
               <Element
