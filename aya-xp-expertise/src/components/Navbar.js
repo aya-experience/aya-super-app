@@ -10,7 +10,6 @@ export const Navbar = () => (
         rel="noopener noreferrer"
       >
       </a>
-      <div className="ttu tc self-center tracked f3 pb2 team">Team</div>
         <div className="oval"/>
     </div>
   </nav>

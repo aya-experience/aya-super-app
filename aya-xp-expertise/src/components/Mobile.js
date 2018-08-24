@@ -41,15 +41,18 @@ export class Mobile extends Component {
           isVisible={this.state.isBrowserActived}
         />
         <Navbar />
-        <div className="content">
-            {members.map((member, index) => (
-              <Element
-                handleClick={this.handlePress}
-                key={member.name}
-                member={member}
-                reversed={index%2 !== 0}
-              />
-            ))}
+        <div className="content pt5">
+            <div className="ttu tc self-center tracked f3 pb2 team">Team</div>
+            <div className="elements pt5">
+                {members.map((member, index) => (
+                  <Element
+                    handleClick={this.handlePress}
+                    key={member.name}
+                    member={member}
+                    reversed={index%2 !== 0}
+                  />
+                ))}
+            </div>
         </div>
       </div>
     );
