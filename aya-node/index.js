@@ -10,14 +10,20 @@ io.on("connection", socket => {
   socket.on("connect-browser", () => {
     console.log("connected to browser");
     browserSocket = socket;
+    if (mobileSocket) {
+      mobileSocket.emit("connect-browser");
+    }
   });
 
   socket.on("connect-mobile", () => {
-    console.log("connected to mobile");
     mobileSocket = socket;
+    if (browserSocket) {
+      mobileSocket.emit("connect-browser");
+    }
   });
 
-  socket.on("do-stuff-on-browser", () => {
+  socket.on("do-stuff-on-browser", e => {
+    console.log(e);
     if (browserSocket) {
       browserSocket.emit("do-stuff-on-browser");
     }
