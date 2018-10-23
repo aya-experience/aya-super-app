@@ -1,46 +1,46 @@
-const http = require("http").createServer(() => null);
-const io = require("socket.io")(http);
+const http = require('http').createServer(() => null);
+const io = require('socket.io')(http);
 
 let appSocket = null;
 let mobileSocket = null;
 let browserSocket = null;
 
-io.on("connection", socket => {
-  console.log("a user is now connected");
+io.on('connection', socket => {
+  console.log('a user is now connected');
 
-  socket.on("connect-app", () => {
-    console.log("connected to APP");
+  socket.on('connect-app', () => {
+    console.log('connected to APP');
     appSocket = socket;
     if (mobileSocket) {
-      mobileSocket.emit("connect-app");
+      mobileSocket.emit('connect-app');
     }
   });
 
-  socket.on("connect-mobile", () => {
-    console.log("connected to MOBILE");
+  socket.on('connect-mobile', () => {
+    console.log('connected to MOBILE');
     mobileSocket = socket;
     if (appSocket) {
-      mobileSocket.emit("connect-app");
+      mobileSocket.emit('connect-app');
     }
 
     if (browserSocket) {
-      browserSocket.emit("connect-mobile");
+      browserSocket.emit('connect-mobile');
     }
   });
 
-  socket.on("connect-browser", () => {
-    console.log("connected to BROWSER");
+  socket.on('connect-browser', () => {
+    console.log('connected to BROWSER');
     browserSocket = socket;
 
     if (mobileSocket) {
-      browserSocket.emit("connect-mobile");
+      browserSocket.emit('connect-mobile');
     }
   });
 
-  socket.on("do-stuff-on-browser", e => {
+  socket.on('do-stuff-on-browser', e => {
     console.log(e);
     if (appSocket) {
-      appSocket.emit("do-stuff-on-browser", e);
+      appSocket.emit('do-stuff-on-browser', e);
     }
   });
 });
